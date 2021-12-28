@@ -1,0 +1,31 @@
+@startuml
+
+actor "At Home User" as home_user
+actor "DIY user" as diy_user
+
+package GroceryBot {
+  usecase "Add Items Purchased Personally" as add_items
+  usecase "Define new Items" as define_new_items
+  usecase "Check Stock remotely" as check_stock
+  usecase "integrate third party applications" as third_party
+  usecase "Able to Host in cloud" as cloud_service
+  usecase "Host system on local computers" as local_host
+  usecase "Automatically order items" as auto_order
+}
+
+home_user --> add_items
+home_user --> define_new_items
+home_user --> check_stock
+home_user --> third_party
+home_user --> auto_order
+home_user --> cloud_service
+diy_user --> local_host
+diy_user --> add_items
+diy_user --> define_new_items
+diy_user --> check_stock
+diy_user --> third_party
+diy_user --> auto_order
+
+
+
+@enduml

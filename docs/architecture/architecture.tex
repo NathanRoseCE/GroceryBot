@@ -1,0 +1,29 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{import}
+\usepackage{docmute}
+\usepackage{float}
+\usepackage[export]{adjustbox} % also loads graphicx
+\geometry{letterpaper, margin=0.5in}
+
+
+% formatting commands
+% Creates a formatted image with a figure tag and caption
+% 1: image filepath
+% 2: Caption
+% 3: figure label
+\newcommand\image[3]{
+  \begin{figure}[H]
+    \begin{center}
+      \makebox[\textwidth]{\includegraphics[max width=\textwidth]{#1}}
+    \end{center}
+    \caption{#2}
+    \label{#3}
+  \end{figure}
+}
+
+
+\begin{document}
+\subimport{./}{content}
+\end{document}
